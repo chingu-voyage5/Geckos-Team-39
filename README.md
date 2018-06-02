@@ -45,11 +45,10 @@ $ git merge master/upstream or git merge develop/upstream
 After pulling in the changes you can create a new branch using the command 
 
 ```
-git checkout -b branch-name
+$ git checkout -b branch-name
 ```
 
-#### Note
-Please read the naming conventions for branch names in the Naming Branches section of this file.
+**Note:-** Please read the naming conventions for branch names in the [Naming Branches](https://github.com/chingu-voyage5/Geckos-Team-39/blob/master/README.md#naming-branches) section.
 
 If without pulling the changes you create a new branch, then it may have merge conflicts. Make sure before creating any branch all the changes have been pulled in.
 
@@ -64,11 +63,13 @@ $ git add my_changed_files
 $ git commit -m "A small but relevant commit message"
 ```
 
-#### Note
-Please read how to write a good commit message in the Commit Messages section of this file.
+**Note:-** Please read how to write a good commit message in the [Commit Messages](https://github.com/chingu-voyage5/Geckos-Team-39/blob/master/README.md#commit-messages) section.
+
 Then, push the changes. 
 
+```
 $ git push origin branch-name
+```
 
 Sometimes when you have edited your files using github online editor instead of doing that locally, you need to pull the changes first
 using :
