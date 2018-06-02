@@ -1,3 +1,4 @@
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/chingu-voyage5/Geckos-Team-39.png?columns=all)](https://waffle.io/chingu-voyage5/Geckos-Team-39?utm_source=badge)
 # Geckos-Team-39
 Add-project-description-here ! | Voyage-5 | chingu.io
 
