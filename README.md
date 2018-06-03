@@ -1,6 +1,12 @@
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/chingu-voyage5/Geckos-Team-39.png?columns=all)](https://waffle.io/chingu-voyage5/Geckos-Team-39?utm_source=badge)
 # Geckos-Team-39
-Add-project-description-here ! | Voyage-5 | chingu.io
+Web-dev project ideas finder | Voyage-5 | chingu.io
+
+## Project name
+Project Finder
+
+## Project description
+A library of project ideas that can be frequently updated with new project ideas from the coding community. This serves to help coders, like in the Chingu community, to quickly find ideas to work on for side-projects, pair-programming, or team projects depending on skill level requirements.
 
 ## Fork the project
 
