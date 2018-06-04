@@ -1,0 +1,1 @@
+import '../style/app.css';
