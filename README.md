@@ -20,7 +20,7 @@ npm install
 ## Running the project locally
 - Run the command below
 ```
-npm start
+npm run build
 ```
 - Go to [http://localhost:7700](http://localhost:7700)
 
