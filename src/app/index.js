@@ -1,1 +1,2 @@
-import '../style/app.css';
+import '../public/assets/css/mystyles.scss';
+import '../public/assets/css/app.css';

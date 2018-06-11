@@ -1,38 +1,25 @@
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const Dotenv = require('dotenv-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin'); 
 
-const ENV = process.env.APP_ENV;
-const isTest = ENV === 'test'
-const isProd = ENV === 'prod';
-
-function setDevTool() {  // function to set dev-tool depending on environment
-    if (isTest) {
-      return 'inline-source-map';
-    } else if (isProd) {
-      return 'inline-source-map';
-    } else {
-      return 'eval-source-map';
-    }
-}
-
-const config = {
-    entry: __dirname + "/src/app/index.js", 
+module.exports = {
+    entry: {
+        home:  __dirname + '/src/app/index.js',  
+        search:  __dirname + '/src/app/search.js'    
+    },
     output: {
       path: __dirname + '/dist',
-      filename: 'bundle.js',
+      filename: '[name].bundle.js',
       publicPath: '/'
     },
-    mode: 'development',
-    devtool: setDevTool(),
+    watch: true,
     optimization: {
         splitChunks: {
           cacheGroups: {
             styles: {
               name: 'styles',
-              test: /\.css$/,
+              test: /\.(css|scss)$/,
               chunks: 'all',
               enforce: true
             }
@@ -43,51 +30,76 @@ const config = {
         rules: [
             {
                 test: /\.js$/,
-                use: 'babel-loader',
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: ['env']
+                        }
+                    }
+                ],
                 exclude: [
                   /node_modules/
                 ]
             },
             {
                 test: /\.html/,
-                loader: 'raw-loader'
+                use: {
+                    loader: 'html-loader'
+                    }
             },
             {
-                test: /\.css$/,
+                test: /\.(png|jpg)$/,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'images/',
+                        publicPath: 'images/'
+                    }
+                  }
+                ]
+            },
+            {
+                test: /\.(css|scss)$/,
                 use: [
                   MiniCssExtractPlugin.loader,
-                  'css-loader'
+                  'css-loader',
+                  'sass-loader'
                 ]
             }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: __dirname + "/src/public/index.html",
-            inject: 'body'
+            filename: 'index.html',
+            template: __dirname + '/src/public/index.html',
+            chunks: ['styles', 'home']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'search.html',
+            template: __dirname + '/src/public/search.html',
+            chunks: ['styles', 'home', 'search']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'share-idea.html',
+            template: __dirname + '/src/public/share-idea.html',
+            chunks: ['styles', 'home']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'find-project-partner.html',
+            template: __dirname + '/src/public/find-project-partner.html',
+            chunks: ['styles', 'home']
         }),
         new MiniCssExtractPlugin({
-            filename: "[name].css",
+            filename: '[name].css',
         }),
-        new Dotenv({
-            path: './some.env', // load this now instead of the ones in '.env'
-            safe: false
-        })
+        new CleanWebpackPlugin(['dist']),
+        new UglifyJSPlugin({})  // minify the chunk
     ],
     devServer: {
         contentBase: './src/public',
         port: 7700,
     } 
   };
-
-// Minify and copy assets in production
-if(isProd) {  // plugins to use in a production environment
-    config.plugins.push(
-        // new UglifyJSPlugin(),  // minify the chunk
-        new CopyWebpackPlugin([{  // copy assets to public folder
-          from: __dirname + '/src/public'
-        }])
-    );
-};
-
-module.exports = config;
