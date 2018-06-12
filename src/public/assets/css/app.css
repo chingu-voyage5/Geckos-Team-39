@@ -1,3 +1,12 @@
+div.hero-body {
+    /* padding: 0; */
+    background-image: url(../images/mountains-1412683.png);
+    background-size: cover;
+    background-position: center
+}
+/* h1.title {
+    color: offwhite;
+} */
 .button.is-warning {
     margin: 0.5em 0.8em 0.5em 0.5em;
 }
