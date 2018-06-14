@@ -34,3 +34,10 @@ a.button.is-danger.is-uppercase {
 .button.is-warning {
     margin: 0.5em 0.8em 0.5em 0.5em;
 }
+.level:not(:last-child) {
+    margin-bottom: 0;
+}
+.footer {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.8rem;
+}
