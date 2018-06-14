@@ -1,12 +1,30 @@
 div.hero-body {
-    /* padding: 0; */
     background-image: url(../images/mountains-1412683.png);
     background-size: cover;
     background-position: center
 }
-/* h1.title {
-    color: offwhite;
-} */
+div.content {
+    padding: 2rem;
+    position: absolute;
+    top: 20%;
+}
+div.column.notification {
+    margin: 0.6rem;
+    padding: 2.5rem;
+    min-height: 10rem;
+    height: 20rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+a.button.is-danger.is-uppercase {
+    position: absolute;
+    top: 8rem;
+    right: 0;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+}
 .button.is-warning {
     margin: 0.5em 0.8em 0.5em 0.5em;
 }
