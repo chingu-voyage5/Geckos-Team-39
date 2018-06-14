@@ -3,6 +3,12 @@ div.hero-body {
     background-size: cover;
     background-position: center
 }
+h1.title {
+    padding: 1.6rem;
+    border-radius: 0.08rem;
+    text-shadow: 0 1px 0.4px rgba(50,50,50,0.2);
+    background-color: rgba(251, 252, 247, 0.8);
+}
 div.content {
     padding: 2rem;
     position: absolute;
