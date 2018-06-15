@@ -13,6 +13,9 @@ div.content {
     padding: 2rem;
     position: absolute;
     top: 20%;
+    left: 0;
+    right: 0;
+    letter-spacing: 0.03rem;
 }
 div.column.notification {
     margin: 0.6rem;
@@ -20,7 +23,7 @@ div.column.notification {
     min-height: 10rem;
     height: 20rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 a.button.is-danger.is-uppercase {
