@@ -8,9 +8,10 @@ $darkgreen: #3ab795;
 $red: #EF6F6C;
 $yellow: #FFCF56;
 $offwhite: #FBFCF7;
+$family-secondary: "Source Sans Pro", sans-serif;
 
 // Add a serif family
-$family-serif: "Merriweather", "Georgia", serif;
+$family-sans-serif: "Oxygen", sans-serif;
 
 // 3. Set the derived variables
 $primary: $lightgreen;
@@ -19,8 +20,8 @@ $info: $darkgreen;
 $white-ter: $offwhite;
 $footer-background-color: $lightgreen;
 
-// Use the new serif family
-$family-primary: $family-serif;
+// Set the new sans-serif family
+$family-primary: $family-sans-serif;
 
 // 4. Setup your Custom Colors
 $linkedin: #0077b5;
@@ -38,6 +39,14 @@ $addColors: (
   "github": ($github, $github-invert)
 );
 $colors: map-merge($colors, $addColors);
+
+// Custom styles
+body {
+  font-family: $family-secondary;
+}
+.title, .subtitle {
+  font-family: $family-primary;
+}
 
 // 6. Import the rest of Bulma
 @import "~bulma";
