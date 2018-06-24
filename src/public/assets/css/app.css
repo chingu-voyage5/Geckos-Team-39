@@ -1,3 +1,11 @@
+.is-vertical-center {
+    transform: translate(0, 50%);
+}
+
+.field {
+    margin-top: 1.5rem;
+}
+
 div.hero-body {
     background-image: url(../images/mountains-1412683.png);
     background-size: cover;
