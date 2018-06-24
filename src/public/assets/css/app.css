@@ -1,3 +1,48 @@
-body {
-    background-color: red;
+div.hero-body {
+    background-image: url(../images/mountains-1412683.png);
+    background-size: cover;
+    background-position: center
+}
+h1.title {
+    padding: 1.6rem;
+    border-radius: 0.08rem;
+    text-shadow: 0 1px 0.4px rgba(150,150,150,0.2);
+    background-color: rgba(251, 252, 247, 0.8);
+    letter-spacing: 0.05rem;
+    line-height: 2.5rem;
+}
+div.content {
+    padding: 2rem;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    letter-spacing: 0.03rem;
+}
+div.column.notification {
+    margin: 0.6rem;
+    padding: 2.5rem;
+    min-height: 10rem;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a.button.is-danger.is-uppercase {
+    position: absolute;
+    top: 8rem;
+    right: 0;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+}
+.button.is-warning {
+    margin: 0.5em 0.8em 0.5em 0.5em;
+}
+.level:not(:last-child) {
+    margin-bottom: 0;
+}
+.footer {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.8rem;
 }
