@@ -54,3 +54,22 @@ a.button.is-danger.is-uppercase {
     padding: 0.8rem 1.5rem;
     font-size: 0.8rem;
 }
+
+/* MEDIA QUERIES */
+@media screen and (max-width:570px) {
+    div.control:nth-child(2) {
+        margin-right: 0 !important;
+    }
+}
+
+@media screen and (max-width:490px) {
+    div.control:first-child {
+        margin-right: 0 !important;
+    }
+}
+
+@media screen and (max-width:370px) {
+    div.control {
+        margin-right: 0 !important;
+    }
+}
