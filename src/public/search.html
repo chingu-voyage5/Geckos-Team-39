@@ -5,8 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Project Finder - Search</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oxygen|Source+Sans+Pro" rel="stylesheet">
 </head>
 <body>
-    <h1>Search page</h1>
+  <header>
+    <!-- NAVBAR -->
+    <nav class="navbar is-primary">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="index.html">
+            <!-- <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28"> -->
+            <p class="is-size-5	">IDEAfinder</p>
+          </a>
+          <div class="navbar-burger burger" data-target="navbarMain">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      <!-- Main menu -->
+        <div id="navbarMain" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item" href="#">
+              Find your idea
+            </a>
+            <a class="navbar-item" href="#">
+              Share an idea
+            </a>
+            <a class="navbar-item" href="#">
+              Find a partner
+            </a>
+            <a class="navbar-item" href="#">
+              Sign in
+            </a>
+            <a class="button is-warning has-text-white" href="#">
+              Sign up
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <section id="main" class="section has-background-white-ter">
+        <div class="container">
+          <div class="is-vertical-center">
+              <h1 class="title is-size-4 has-text-grey-dark has-text-centered is-shadowless">
+                  Search your next project idea here
+              </h1>
+            <div class="columns">
+              <div class="field has-addons has-addons-centered column is-10 is-offset-1">
+                  <div class="control is-expanded">
+                      <input class="input" type="text" placeholder="Search ideas">
+                  </div>
+                  <div class="control">
+                    <div class="select">
+                        <select>
+                            <option>Select difficulty</option>
+                            <option>Beginner Front-end</option>
+                            <option>Intermediate Front-end</option>
+                            <option>Back-end</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="control">
+                      <a class="button is-info">
+                      Search
+                      </a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- End of MAIN -->
+
+    <!-- FOOTER -->
+      <footer class="footer level has-text-white-ter">
+        <div class="level-left">
+          <p class="level-item">
+              &#169; 2018 Chingu voyage 5 - Geckos team 39
+          </p>
+        </div>
+
+        <div class="level-right">
+          <p class="level-item">
+            <a class="has-text-white-ter" href="#">About ideafinder</a>
+          </p>
+          <p class="level-item">
+            <a class="has-text-white-ter" href="#">Search ideas</a>
+          </p>
+          <p class="level-item">
+            <a class="has-text-white-ter" href="#">Share an idea</a>
+          </p>
+          <p class="level-item">
+            <a class="has-text-white-ter" href="#">Find team members</a>
+          </p>
+          <p class="level-item">
+            |
+          </p>
+          <p class="level-item">
+            <a class="has-text-white-ter" href="#">Code of conduct</a>
+          </p>
+        </div>
+      </footer>
 </body>
 </html>

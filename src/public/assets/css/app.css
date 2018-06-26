@@ -1,3 +1,11 @@
+.is-vertical-center {
+    transform: translate(0, 50%);
+}
+
+.field {
+    margin-top: 1.5rem;
+}
+
 div.hero-body {
     background-image: url(../images/mountains-1412683.png);
     background-size: cover;
@@ -45,4 +53,23 @@ a.button.is-danger.is-uppercase {
 .footer {
     padding: 0.8rem 1.5rem;
     font-size: 0.8rem;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width:570px) {
+    div.control:nth-child(2) {
+        margin-right: 0 !important;
+    }
+}
+
+@media screen and (max-width:490px) {
+    div.control:first-child {
+        margin-right: 0 !important;
+    }
+}
+
+@media screen and (max-width:370px) {
+    div.control {
+        margin-right: 0 !important;
+    }
 }
